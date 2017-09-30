@@ -13,25 +13,24 @@ create
 	make
 
 feature {NONE} -- Initialization
-	item_list : UNORDEREDLIST
-	item : ITEM
+	parent : DIAMOND_PARENT
+	inheritor1 : DIAMOND_INHERITOR_1
+	inheritor2 : DIAMOND_INHERITOR_2
+	child : DIAMOND_CHILD
 
 	make
 			-- Run application.
-		local
-			item2 : ITEM
 		do
 			--| Add your code here
-			io.put_string ("Hello Eiffel World! We will print a list %N")
+			create parent.make("value1")
+			create inheritor1.make ("value2")
+			create inheritor2.make ("value3")
+			create child.make ("value4")
 
-			create item.make("myValue1")
-			create item2.make ("mysecondvalue")
-			create item_list.make
-
-			item_list.add_element(item)
-			item_list.add_element (item2)
-
-			io.put_string (item_list.get_html())
+			-- polymorhpism
+			parent := child
+			-- parent is actually the child: Expected value of output?
+			io.put_string (parent.value)
 
 		end
 end
