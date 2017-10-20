@@ -35,10 +35,7 @@ feature
 		end
 
 	add_entry (fc: FILESYSTEM_COMPONENT)
-		require
-			fc.parent = Void
 		do
-			fc.set_parent (Current)
 			entries.extend (fc)
 		end
 

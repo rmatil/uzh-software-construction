@@ -1,7 +1,3 @@
-indexing
-	description : "Design pattern exercise, Question 2."
-	date        : "$Date: 2010-03-26 13:31:00 +0100 (Fri, 26 Mar 2010) $"
-	revision    : "$Revision: 135 $"
 
 class
 	APPLICATION

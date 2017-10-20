@@ -15,17 +15,8 @@ feature
 		deferred
 		end
 
-	parent: FILESYSTEM_COMPONENT
-
 	accept (a_visitor: VISITOR)
 		deferred
-		end
-
-feature {FILESYSTEM_COMPONENT}
-
-	set_parent (fc: FILESYSTEM_COMPONENT)
-		do
-			parent := fc
 		end
 
 end
