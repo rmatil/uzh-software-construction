@@ -14,15 +14,4 @@ feature
 	size: INTEGER
 		deferred
 		end
-
-	parent: FILESYSTEM_COMPONENT
-
-
-feature {FILESYSTEM_COMPONENT}
-
-	set_parent (fc: FILESYSTEM_COMPONENT)
-		do
-			parent := fc
-		end
-
 end

@@ -1,8 +1,3 @@
-indexing
-	description : "Design pattern exercise, Question 1."
-	date        : "$Date: 2010-03-26 13:31:00 +0100 (Fri, 26 Mar 2010) $"
-	revision    : "$Revision: 135 $"
-
 class
 	APPLICATION
 
@@ -20,7 +15,9 @@ feature {NONE} -- Initialization
 			folder: FS_FOLDER
 			file: FS_FILE
 		do
-			--| Add your code here
+			create folder.make ("Folder 1");
+			create file.make("File 1");
+			folder.add_entry (file);
 		end
 
 end

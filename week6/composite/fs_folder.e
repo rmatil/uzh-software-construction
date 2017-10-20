@@ -10,7 +10,16 @@ class
 inherit
 	FILESYSTEM_COMPONENT
 
+create
+	make
+
 feature
+
+	make(n: STRING)
+	do
+		name := n;
+		create entries.make;
+	end
 
 	size: INTEGER
 		do
@@ -26,15 +35,12 @@ feature
 		end
 
 	add_entry (fc: FILESYSTEM_COMPONENT)
-		require
-			fc.parent = Void
 		do
-			fc.set_parent (Current)
 			entries.extend (fc)
 		end
 
 feature {NONE}
 
-	entries: LIST [FILESYSTEM_COMPONENT]
+	entries: LINKED_LIST [FILESYSTEM_COMPONENT]
 
 end
