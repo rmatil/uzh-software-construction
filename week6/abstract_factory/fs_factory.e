@@ -9,16 +9,12 @@ deferred class
 
 feature
 
-	create_file (name: STRING; size: INTEGER; is_text_file: BOOLEAN)
+	create_file (name: STRING; size: INTEGER; is_text_file: BOOLEAN): FS_FILE
 		deferred
 		end
 
-	last_created_file: FS_FILE
-
-	create_folder (name: STRING)
+	create_folder (name: STRING): FS_FOLDER
 		deferred
 		end
-
-	last_created_folder: FS_FOLDER
 
 end

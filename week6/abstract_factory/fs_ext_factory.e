@@ -15,14 +15,20 @@ create
 
 feature
 
-	create_file (name: STRING; size: INTEGER; is_text_file: BOOLEAN)
+	create_file (name: STRING; size: INTEGER; is_text_file: BOOLEAN) : FS_FILE
+		local
+			last_created_file: FS_EXT_FILE
 		do
-			create {FS_EXT_FILE} last_created_file.make (name, size, is_text_file)
+			create last_created_file.make (name, size, is_text_file)
+			Result := last_created_file
 		end
 
-	create_folder (name: STRING)
+	create_folder (name: STRING) : FS_FOLDER
+		local
+			last_created_folder: FS_EXT_FOLDER
 		do
-			create {FS_EXT_FOLDER} last_created_folder.make (name)
+			create last_created_folder.make (name)
+			Result := last_created_folder
 		end
-		
+
 end

@@ -15,7 +15,7 @@ feature
 		deferred
 		end
 
-	parent: FILESYSTEM_COMPONENT
+	parent: detachable FILESYSTEM_COMPONENT
 
 	accept (a_visitor: VISITOR)
 		deferred

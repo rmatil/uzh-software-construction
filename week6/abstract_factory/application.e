@@ -17,24 +17,19 @@ feature {NONE} -- Initialization
 			email_list, article, report: FS_FILE
 			count_visitor: TEXTFILE_COUNT_VISITOR
 		do
-				-- Change FS_EXT_FACTORY to FS_NTFS_FACTORY to build up a different file system.
+		    -- Change FS_EXT_FACTORY to FS_NTFS_FACTORY to build up a different file system.
 			create {FS_EXT_FACTORY} factory
 
-			factory.create_folder ("Documents")
-			documents := factory.last_created_folder
-			factory.create_folder ("Manuscripts")
-			manuscripts := factory.last_created_folder
+			documents := factory.create_folder ("Documents")
+			manuscripts := factory.create_folder ("Manuscripts")
 			documents.add_entry (manuscripts)
 
-			factory.create_file ("emails.txt", 50, True)
-			email_list := factory.last_created_file
+			email_list := factory.create_file ("emails.txt", 50, True)
 			documents.add_entry (email_list)
 
-			factory.create_file ("article.txt", 100, True)
-			article := factory.last_created_file
+			article := factory.create_file ("article.txt", 100, True)
 			manuscripts.add_entry (article)
-			factory.create_file ("report.pdf", 50, False)
-			report := factory.last_created_file
+			report := factory.create_file ("report.pdf", 50, False)
 			manuscripts.add_entry (report)
 
 			io.put_string ("Size of Documents: " + documents.size.out + "%N")
