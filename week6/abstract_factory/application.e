@@ -18,7 +18,7 @@ feature {NONE} -- Initialization
 			count_visitor: TEXTFILE_COUNT_VISITOR
 		do
 		    -- Change FS_EXT_FACTORY to FS_NTFS_FACTORY to build up a different file system.
-			create {FS_EXT_FACTORY} factory
+			create {FS_NTFS_FACTORY} factory
 
 			documents := factory.create_folder ("Documents")
 			manuscripts := factory.create_folder ("Manuscripts")
