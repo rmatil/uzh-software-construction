@@ -14,23 +14,26 @@ feature
 	-- Initialize the contents
 	make
 		do
-			create {LINKED_LIST [STRING]} entries.make
+			create {LINKED_LIST [PAIR[STRING]]} entries.make
 		end
 
 	-- Add a new content
-	add_entry(a_content: STRING)
+	add_entry(a_path: STRING; a_content: STRING)
+		local
+			pair: PAIR[STRING]
 		do
-			entries.extend (a_content)
+			create pair.make (a_path, a_content)
+			entries.extend (pair)
 		end
 
 	-- Get all content
-	get_contents: LIST[STRING]
+	get_contents: LIST[PAIR[STRING]]
 		do
 			Result := entries
 		end
 
 feature {NONE}
-	entries: LIST[STRING]
+	entries: LIST[PAIR[STRING]]
 
 
 end

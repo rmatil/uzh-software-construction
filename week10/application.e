@@ -26,7 +26,7 @@ feature {NONE} -- Initialization
 
 			visitor: CONTENT_VISITOR
 
-			contents: LIST[STRING]
+			contents: LIST[PAIR[STRING]]
 		do
 			--
 			-- Filesystem structure is as follows
@@ -80,8 +80,11 @@ feature {NONE} -- Initialization
 			until
 				contents.off
 			loop
-				print(contents.item)
+				print(contents.item.first)
+				print(": %T")
+				print(contents.item.second)
 				print("%N")
+				
 				contents.forth
 			end
 
