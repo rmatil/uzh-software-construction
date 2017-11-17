@@ -19,6 +19,20 @@
 		</capability>
 		<precompile name="base_pre" location="$ISE_PRECOMP\base-scoop-safe.ecf"/>
 		<library name="base" location="$ISE_LIBRARY\library\base\base.ecf"/>
-		<cluster name="testing" location=".\" recursive="true"/>
+		<library name="testing_library" location="$ISE_LIBRARY\library\testing\testing-safe.ecf"/>
+		<cluster name="testing" location=".\" recursive="true">
+			<file_rule>
+				<exclude>^content/content$</exclude>
+			</file_rule>
+			<file_rule>
+				<exclude>^tests$</exclude>
+			</file_rule>
+			<file_rule>
+				<exclude>^tests$</exclude>
+			</file_rule>
+			<file_rule>
+				<exclude>^tests$</exclude>
+			</file_rule>
+		</cluster>
 	</target>
 </system>
