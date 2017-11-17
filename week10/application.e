@@ -84,7 +84,7 @@ feature {NONE} -- Initialization
 				print(": %T")
 				print(contents.item.second)
 				print("%N")
-				
+
 				contents.forth
 			end
 

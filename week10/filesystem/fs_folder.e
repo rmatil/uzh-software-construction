@@ -16,6 +16,8 @@ create
 feature
 	-- Create a new folder
 	make (a_name: STRING)
+		require
+			a_name.count > 0
 		do
 			name := a_name
 			create {LINKED_LIST [FS_COMPONENT]} entries.make
@@ -41,6 +43,8 @@ feature
 	add_entry (fc: FS_COMPONENT)
 		do
 			entries.extend (fc)
+		ensure
+			entries.count = old entries.count + 1
 		end
 
 

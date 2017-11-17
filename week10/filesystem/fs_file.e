@@ -17,6 +17,8 @@ create
 feature
 	-- Create a new file
 	make (a_name: STRING; a_content: STRING)
+		require
+			a_name.count > 0
 		do
 			name := a_name
 			content := a_content
@@ -38,6 +40,9 @@ feature
 		do
 			a_visitor.visit_file (Current)
 		end
+
+invariant
+	size = content.count
 
 
 end

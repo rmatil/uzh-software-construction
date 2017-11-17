@@ -24,6 +24,8 @@ feature
 		do
 			create pair.make (a_path, a_content)
 			entries.extend (pair)
+		ensure
+			entries.count = old entries.count + 1
 		end
 
 	-- Get all content
