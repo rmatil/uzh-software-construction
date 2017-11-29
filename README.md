@@ -28,6 +28,21 @@ You'll find projects for:
 
 *Note* that you have to import each subfolder within `week6` as dedicated project into EiffelStudio. Use the `.ecf` files within the folders for this purpose.
 
+### Week 10
+This folder contains a complete example of a filesystem, using a `Composite` Pattern in order to create its structure, as well as a `Visitor` to traverse it.
+Further, it illustrates the concept of linking between instances of objects.
+
+Eventually, it contains Unit Tests for two classes. Have a look at the folder `test`.
+
+**Note**: _It is possible to create links which do cause infinite loops while generating output, e.g. a link pointing to its parent element. 
+This was primarily used within the exercise session._
+
+
+### Week 11
+As of now, contains an example of how you can find out the type of an exception.
+It provides an `EXCEPTION_ASSERTER` which inherits from `EXCEPTION_MANAGER_FACTORY` which in turn allows us to have 
+a granular look at what kind of exceptions were thrown and provides further utilities in the context of exceptions.
+
 ## Installation
 
 * Clone this repository by running `git clone git@github.com:rmatil/uzh-software-construction.git`
