@@ -2,6 +2,8 @@
 This repository holds various snippets of Eiffel in order to illustrate particular concepts I explained in the UZH course Software Construction.
 See the different available Tags for each of these concepts.
 
+We link to another remote repository
+
 ## Structure
 The following sections describe the repository structure.
 *Note*: Use the `.ecf` files for importing the projects into EiffelStudio. Alternatively, you may create a new EiffelStudio project and add the sources there.
