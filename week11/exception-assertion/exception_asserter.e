@@ -24,5 +24,4 @@ feature
 				Result := False
 			end
 		end
-
 end
