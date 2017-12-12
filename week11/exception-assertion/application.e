@@ -22,8 +22,7 @@ feature {NONE}
 
 			-- Throw a new exception
 			-- Play with either 0 or 1 to cause exceptions
-      -- Use a zero instead of a one
-			throw_exception_if_zero_or_one(0)
+			throw_exception_if_zero_or_one(1)
 
 		rescue
 			-- Initializie our exception asserter
